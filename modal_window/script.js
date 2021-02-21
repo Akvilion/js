@@ -16,6 +16,15 @@ const OpenModal = function () {
 
 for (let i = 0; i < btnsOpenModal.length; i++) {
   btnsOpenModal[i].addEventListener("click", OpenModal);
-  btnCloseModal.addEventListener("click", closeModal);
-  overlay.addEventListener("click", closeModal);
 }
+
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    if (!modal.classList.contains("hidden")) {
+      // якщо не присутній клас hidden
+      closeModal();
+    }
+  }
+});
