@@ -73,6 +73,7 @@ p {
   z-index: 10;
 }
 
+/* розмиття заднього фону */
 .overlay {
   position: absolute;
   top: 0;
